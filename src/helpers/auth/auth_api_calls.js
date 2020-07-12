@@ -1,13 +1,13 @@
-import { API } from "../backend"; // Importing API endpoint
+import { API } from '../backend'; // Importing API endpoint
 
 // Sign Up
 
 export const signup = (user) => {
 	return fetch(`${API}/signup`, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			Accept: "application/json",
-			"Content-Type": "application/json",
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify(user),
 	});
@@ -17,9 +17,9 @@ export const signup = (user) => {
 
 export const signin = (user) => {
 	return fetch(`${API}/signin`, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify(user),
 	})
@@ -32,8 +32,8 @@ export const signin = (user) => {
 // Save JWT to Local Storage
 
 export const authenticate = (data, next) => {
-	if (typeof window !== "undefined") {
-		localStorage.setItem("jwt", JSON.stringify(data));
+	if (typeof window !== 'undefined') {
+		localStorage.setItem('jwt', JSON.stringify(data));
 		next();
 	}
 };
@@ -41,11 +41,11 @@ export const authenticate = (data, next) => {
 // Is Authenticated Check
 
 export const isAuthenticated = () => {
-	if (typeof window == "undefined") {
+	if (typeof window == 'undefined') {
 		return false;
 	}
-	if (localStorage.getItem("jwt")) {
-		return JSON.parse(localStorage.getItem("jwt"));
+	if (localStorage.getItem('jwt')) {
+		return JSON.parse(localStorage.getItem('jwt'));
 	} else {
 		return false;
 	}
@@ -54,11 +54,11 @@ export const isAuthenticated = () => {
 // Sign Out
 
 export const signout = (next) => {
-	if (typeof window !== "undefined") {
-		localStorage.removeItem("jwt");
+	if (typeof window !== 'undefined') {
+		localStorage.removeItem('jwt');
 
 		return fetch(`${API}/signout`, {
-			method: "GET",
+			method: 'GET',
 		})
 			.then((response) => response.json())
 			.catch((err) => console.log(err));

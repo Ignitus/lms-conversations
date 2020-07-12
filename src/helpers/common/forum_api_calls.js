@@ -1,5 +1,5 @@
-import { API } from "../backend";
-import { isAuthenticated } from "../auth/auth_api_calls";
+import { API } from '../backend';
+import { isAuthenticated } from '../auth/auth_api_calls';
 
 // const { user, token } = isAuthenticated();
 
@@ -9,9 +9,9 @@ import { isAuthenticated } from "../auth/auth_api_calls";
 export const createQuestion = (content, category) => {
 	const { user, token } = isAuthenticated();
 	return fetch(`${API}/question/create/${user._id}`, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 			Authorization: `Bearer ${token}`,
 		},
 		body: JSON.stringify({ content, category }),

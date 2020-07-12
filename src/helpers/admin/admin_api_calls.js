@@ -1,5 +1,5 @@
-import { API } from "../backend";
-import { isAuthenticated } from "../auth/auth_api_calls";
+import { API } from '../backend';
+import { isAuthenticated } from '../auth/auth_api_calls';
 
 /**************** User Calls ****************/
 
@@ -11,10 +11,10 @@ import { isAuthenticated } from "../auth/auth_api_calls";
 export const createCategory = (name) => {
 	const { user, token } = isAuthenticated();
 	return fetch(`${API}/category/create/${user._id}`, {
-		method: "POST",
+		method: 'POST',
 		headers: {
-			Accept: "application/json",
-			"Content-Type": "application/json",
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
 			Authorization: `Bearer ${token}`,
 		},
 		body: JSON.stringify({ name }),
