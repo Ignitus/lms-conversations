@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const UserDashboard = () => {
-  return <React.Fragment></React.Fragment>;
+	return <React.Fragment></React.Fragment>;
 };
 
 export default UserDashboard;

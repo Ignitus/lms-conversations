@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const LMSIconButton = () => {
-  return <Button></Button>;
+	return <Button></Button>;
 };
 
 export default LMSIconButton;
