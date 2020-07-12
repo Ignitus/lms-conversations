@@ -1,10 +1,10 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // Route Helpers
-import PrivateRoute from "./helpers/routes/UserRoute";
-import AdminRoute from "./helpers/routes/AdminRoute";
+import PrivateRoute from './helpers/routes/UserRoute';
+import AdminRoute from './helpers/routes/AdminRoute';
 // Pages
-import Home from "./pages/common/Home";
+import Home from './pages/common/Home';
 // import SignUp from "./pages/common/SignUp";
 // import SignIn from "./pages/common/SignIn";
 

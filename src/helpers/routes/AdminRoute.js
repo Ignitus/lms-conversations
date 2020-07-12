@@ -1,6 +1,6 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
-import { isAuthenticated } from "../auth/auth_api_calls";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { isAuthenticated } from '../auth/auth_api_calls';
 
 const AdminRoute = ({ component: Component, ...rest }) => {
 	return (
@@ -12,7 +12,7 @@ const AdminRoute = ({ component: Component, ...rest }) => {
 				) : (
 					<Redirect
 						to={{
-							pathname: "/",
+							pathname: '/',
 							state: { from: props.location },
 						}}
 					/>
