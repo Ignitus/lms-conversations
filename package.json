@@ -38,6 +38,7 @@
 		]
 	},
 	"devDependencies": {
+		"postcss-cli": "^7.1.1",
 		"prettier": "2.0.5"
 	}
 }
