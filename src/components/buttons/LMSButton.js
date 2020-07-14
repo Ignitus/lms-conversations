@@ -58,8 +58,8 @@ const LMSButton = ({
 			{icon && (
 				<ion-icon
 					name={icon}
-                    size={iconSize ? iconSize : 'small'}
-                    class={loading ? 'rotating' : ''}
+					size={iconSize ? iconSize : 'small'}
+					class={loading ? 'rotating' : ''}
 				></ion-icon>
 			)}
 			<span className={icon ? 'ml-2' : ''}>{title}</span>
